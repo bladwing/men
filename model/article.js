@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", true);
 
 const { Schema } = mongoose;
 
-let studentSchema = new Schema(
+let articleSchema = new Schema(
   {
     title: {
       type: String,
@@ -18,4 +18,4 @@ let studentSchema = new Schema(
 );
  
 
-export default mongoose.model("Articles", studentSchema);
+export default mongoose.model("Article", articleSchema);
