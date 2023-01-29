@@ -11,12 +11,12 @@ export const getAllArticles = async (req, res) => {
 
 export const getArticleById = async (req, res) => {
   try {
-    const Article = await Article.findById({
+    const article = await Article.findById({
       where: {
         id: req.params.id, 
       },
     });
-    res.json(Article);
+    res.json(article);
   } catch (error) {
     res.json({ message: error.message });
   }
