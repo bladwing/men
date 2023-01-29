@@ -46,11 +46,7 @@ export const updateArticle = async (req, res) => {
 
 export const deleteArticle = async (req, res) => {
   try {
-    await Article.findByIdAndRemove({
-      where: {
-        id: req.params.id,
-      },
-    });
+    await Article.findByIdAndRemove(req.params.id);
     res.json({
       message: "Article Deleted",
     });

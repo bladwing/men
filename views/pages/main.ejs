@@ -5,44 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ponarenko API CRUD</title>
+    <title>Ponarenko API MERN</title>
 </head>
 
 <body>
-    <h1>Welcome to my <span>Hell</span> API MERN |\../|</h1>
-    <a href="/article" class="link">Check articles API</a>
-
-
-    <style>
-        body {
-            display: flex;
-            width: 500px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-        }
-        img {
-            width: 600px;
-            border-radius: 20px;
-            
-        }
-        .link {
-            color: green;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            margin-top: 50px;
-        }
-        .link:hover {
-            color: burlywood;
-        }
-        h1 span {
-            color: red;
-        }
-    </style>
+    <header>
+        <h1>Welcome to my <span>Hell</span> API MERN |\../|</h1>
+        <a href="/article" class="link">Check Article's API</a>
+    </header>
+    <form method="POST" action="/article" class="article_form">
+        <h4 class="form_title">Add Article for check functionality</h4>
+        <input type="text" name="title" placeholder="title" maxlength="40" required><br>
+        <textarea type="textarea" name="article" placeholder="article" class="article" required></textarea>
+        <button type="submit" class="productOpt addBtn" id="saveProd" value="add">add</button>
+        <input type="reset" class="addBtn">
+    </form>
 </body>
+
+<style>
+    body {
+        display: flex;
+        width: 500px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        width: 600px;
+        border-radius: 20px;
+    }
+
+    .link {
+        color: green;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        margin-top: 50px;
+    }
+
+    .link:hover {
+        color: burlywood;
+    }
+
+    h1 span {
+        color: red;
+    }
+
+    .form_title {
+        text-align: center;
+    }
+
+    .article_form {
+        width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    input,
+    .article,
+    .addBtn {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .addBtn {
+        margin-left: 10px;
+    }
+
+    .article {
+        width: 200px;
+        min-height: 120px;
+        max-width: 200px;
+    }
+</style>
 
 </html>
