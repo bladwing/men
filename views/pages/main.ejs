@@ -14,12 +14,18 @@
         <a href="/article" class="link">Check Article's API</a>
     </header>
     <form method="POST" action="/article" class="article_form">
-        <h4 class="form_title">Add Article for check functionality</h4>
-        <input type="text" name="title" placeholder="title" maxlength="40" required><br>
-        <textarea type="textarea" name="article" placeholder="article" class="article" required></textarea>
-        <button type="submit" class="productOpt addBtn" id="saveProd" value="add">add</button>
-        <input type="reset" class="addBtn">
+        <h4 class="form_title">For check functionality</h4>
+        <input type="text" name="title" placeholder="Title" maxlength="40" required><br>
+        <textarea type="textarea" name="article" placeholder="Article Text" class="article" required></textarea>
+
+        <div class="button-container">
+            <button type="submit" class="productOpt addBtn" id="saveProd" value="add">Add</button>
+            <input type="reset" class="addBtn reset">
+        </div>
     </form>
+
+
+    <footer>Created by <a href="https://timponarenko.netlify.app/" target="_blank" rel="noopener noreferrer">Tim Ponareko</a></footer>
 </body>
 
 <style>
@@ -42,14 +48,18 @@
 
     .link {
         color: green;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 700;
         text-decoration: none;
-        margin-top: 50px;
+        margin-left: 155px;
+        border: 1px solid green;
+        padding: 10px;
+        border-radius: 10px;
     }
 
     .link:hover {
-        color: burlywood;
+        color: rgb(75, 204, 75);
+        border: 1px solid rgb(75, 204, 75);
     }
 
     h1 span {
@@ -58,6 +68,7 @@
 
     .form_title {
         text-align: center;
+       
     }
 
     .article_form {
@@ -75,6 +86,7 @@
     .addBtn {
         padding: 10px;
         margin-top: 10px;
+      
     }
 
     .addBtn {
@@ -86,6 +98,30 @@
         min-height: 120px;
         max-width: 200px;
     }
+    .button-container {
+        margin: 0 auto;
+       
+
+    }
+    button, .reset {
+        cursor: pointer;
+        font-weight: 700;
+    }
+    footer {
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    footer a {
+        text-decoration: none;
+        color: blue;
+    }
+    footer a:hover {
+        text-decoration: none;
+        color: green;
+    }
+
 </style>
 
 </html>
